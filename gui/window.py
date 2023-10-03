@@ -13,38 +13,38 @@ class MainWindow(QMainWindow):
 
         self.setWindowTitle("My App")
 
-        self.setStyleSheet("""
-            QMainWindow {
-                background-color: #282828;
-                color: #ffffff;
-            }
-            QPushButton {
-                background-color: #333333;
-                color: #ffffff;
-            }
-            QPushButton:hover {
-                background-color: #555555;
-            }
-            QLineEdit {
-                background-color: #333333;
-                color: #ffffff;
-            }
-            QTableWidget {
-                background-color: #333333;
-                color: #ffffff;
-            }
-            QHeaderView::section {
-                background-color: #333333;
-                color: #ffffff;
-            }
-            QTableCornerButton::section {
-                background-color: #333333;
-                border: none;
-            }
-            QTableView {
-                gridline-color: #333333;
-            }
-        """)
+      #  self.setStyleSheet("""
+      #       QMainWindow {
+      #           background-color: #282828;
+      #           color: #ffffff;
+      #       }
+      #       QPushButton {
+      #           background-color: #333333;
+      #           color: #ffffff;
+      #       }
+      #       QPushButton:hover {
+      #           background-color: #555555;
+      #       }
+      #       QLineEdit {
+      #           background-color: #333333;
+      #           color: #ffffff;
+      #       }
+      #       QTableWidget {
+      #           background-color: #333333;
+      #           color: #ffffff;
+      #       }
+      #       QHeaderView::section {
+      #           background-color: #333333;
+      #           color: #ffffff;
+      #       }
+      #       QTableCornerButton::section {
+      #           background-color: #333333;
+      #           border: none;
+      #       }
+      #       QTableView {
+      #           gridline-color: #333333;
+      #       }
+      #   """)
 
         self.word_sort_order = 0
         self.difficulty_sort_order = 0
@@ -139,7 +139,7 @@ class MainWindow(QMainWindow):
 
             # Создаем кнопку "Удалить"
             delete_button = QPushButton("Delete")
-            delete_button.clicked.connect(lambda checked, row=i: self.delete_word(row))
+            delete_button.clicked.connect(lambda checked, word=word: self.delete_word(word))
 
             # Добавляем кнопку в таблицу
             self.table.setCellWidget(i, 3, delete_button)
@@ -161,10 +161,7 @@ class MainWindow(QMainWindow):
             # Обновляем таблицу
             self.update_table()
 
-    def delete_word(self, row):
-        # Получаем слово из таблицы
-        word = self.table.item(row, 0).text()
-
+    def delete_word(self, word):
         # Удаляем слово из базы данных
         delete_word(self.conn, word)
 

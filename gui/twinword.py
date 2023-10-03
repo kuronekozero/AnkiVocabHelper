@@ -2,7 +2,7 @@ import requests
 
 def get_word_difficulty(word):
     # Считываем API ключ и X-RapidAPI-Host из файла
-    with open('apikey.txt', 'r') as f:
+    with open('C:/Users/Kuroneko/Desktop/apikey.txt', 'r') as f:
         lines = f.readlines()
         headers = {line.split(':')[0].strip(): line.split(':')[1].strip() for line in lines}
 
