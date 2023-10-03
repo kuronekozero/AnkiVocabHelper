@@ -13,38 +13,38 @@ class MainWindow(QMainWindow):
 
         self.setWindowTitle("My App")
 
-      #  self.setStyleSheet("""
-      #       QMainWindow {
-      #           background-color: #282828;
-      #           color: #ffffff;
-      #       }
-      #       QPushButton {
-      #           background-color: #333333;
-      #           color: #ffffff;
-      #       }
-      #       QPushButton:hover {
-      #           background-color: #555555;
-      #       }
-      #       QLineEdit {
-      #           background-color: #333333;
-      #           color: #ffffff;
-      #       }
-      #       QTableWidget {
-      #           background-color: #333333;
-      #           color: #ffffff;
-      #       }
-      #       QHeaderView::section {
-      #           background-color: #333333;
-      #           color: #ffffff;
-      #       }
-      #       QTableCornerButton::section {
-      #           background-color: #333333;
-      #           border: none;
-      #       }
-      #       QTableView {
-      #           gridline-color: #333333;
-      #       }
-      #   """)
+        self.setStyleSheet("""
+            QMainWindow {
+                background-color: #282828;
+                color: #ffffff;
+            }
+            QPushButton {
+                background-color: #333333;
+                color: #ffffff;
+            }
+            QPushButton:hover {
+                background-color: #555555;
+            }
+            QLineEdit {
+                background-color: #333333;
+                color: #ffffff;
+            }
+            QTableWidget {
+                background-color: #333333;
+                color: #ffffff;
+            }
+            QHeaderView::section {
+                background-color: #333333;
+                color: #ffffff;
+            }
+            QTableCornerButton::section {
+                background-color: #333333;
+                border: none;
+            }
+            QTableView {
+                gridline-color: #333333;
+            }
+        """)
 
         self.word_sort_order = 0
         self.difficulty_sort_order = 0
