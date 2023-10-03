@@ -28,6 +28,7 @@ def delete_word(conn, word):
     conn.commit()
 
 def add_word(conn, word, frequency):
+    word = word.lower()
     sql = '''INSERT INTO words(word, frequency, date_added) VALUES(?, ?, ?)'''
     cur = conn.cursor()
     cur.execute(sql, (word, float(frequency), datetime.now().strftime("%d-%m-%Y")))
@@ -58,11 +59,11 @@ def update_word_frequency(conn, word, frequency):
     conn.commit()
 
 def word_exists(conn, word):
+    word = word.lower()
     sql = '''SELECT * FROM words WHERE word = ?'''
     cur = conn.cursor()
     cur.execute(sql, (word,))
     return cur.fetchone() is not None
-
 
 def main():
     conn = create_connection()
