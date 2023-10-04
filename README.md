@@ -82,8 +82,6 @@ After adding some words just sort the table by difficulty.
 
 ## Development Updates
 
-This section provides information about the ongoing development and support for the English Vocabulary Helper. It includes details about fixes that have been implemented and potential additions or changes planned for future versions of the program.
-
 ### Fixes and Improvements
 
 - ~~**Issue 1**: Fix sorting order.~~ (Completed)
