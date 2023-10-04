@@ -80,6 +80,22 @@ That's it!
 To run the application, simply execute the built exe file. You can add new words to assess their difficulty and review them later. 
 After adding some words just sort the table by difficulty.
 
+## Development Updates
+
+This section provides information about the ongoing development and support for the English Vocabulary Helper. It includes details about fixes that have been implemented and potential additions or changes planned for future versions of the program.
+
+### Fixes and Improvements
+
+- ~~**Issue 1**: Fix sorting order.~~ (Completed)
+- ~~**Issue 2**: Fix upper case lower case problem.~~ (Completed)
+- **Issue 2**: Fix sorting words by date. 
+
+### Planned Additions and Changes
+
+- **Addition/Change 1**: Add other languages support.
+- **Addition/Change 2**: Add option to create more than one table.
+- **Addition/Change 3**: Add stars near each word so the word will be in priority while sorting.
+
 ## Troubleshooting
 
 This section describes some known issues you may encounter while using the English Vocabulary Helper,
