@@ -47,7 +47,7 @@ def column_exists(conn, column_name):
     return any(row[1] == column_name for row in cur.fetchall())
 
 def get_all_words(conn):
-    sql = '''SELECT id, word, frequency, date_added FROM words ORDER BY frequency DESC'''
+    sql = '''SELECT id, word, frequency, date_added FROM words ORDER BY frequency ASC'''
     cur = conn.cursor()
     cur.execute(sql)
     return cur.fetchall()

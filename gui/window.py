@@ -208,6 +208,15 @@ class MainWindow(QMainWindow):
 
             self.sort_date(self.date_sort_order)
 
+        # Store the current sort column and order
+        self.current_sort_column = column
+        if column == 0:
+            self.current_sort_order = Qt.AscendingOrder if self.word_sort_order == 1 else Qt.DescendingOrder
+        elif column == 1:
+            self.current_sort_order = Qt.AscendingOrder if self.difficulty_sort_order == 1 else Qt.DescendingOrder
+        elif column == 2:
+            self.current_sort_order = Qt.AscendingOrder if self.date_sort_order == 1 else Qt.DescendingOrder
+
     def sort_date(self, order):
         if order == 0:
             # Сортируем по дате от ранних к поздним
