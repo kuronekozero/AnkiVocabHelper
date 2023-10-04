@@ -80,6 +80,22 @@ That's it!
 To run the application, simply execute the built exe file. You can add new words to assess their difficulty and review them later. 
 After adding some words just sort the table by difficulty.
 
+## Troubleshooting
+
+This section describes some known issues you may encounter while using the English Vocabulary Helper,
+
+### 1. Word is added to the table with a difficulty of 0
+
+If a word is added to the table with a difficulty of 0, this could indicate issues with connecting to the API. In this case, the word will still be added to the table, but its difficulty will be set to 0. This problem may occur if you forgot to add your API key to apikey.txt file in `gui` folder. And if a word has a difficulty of 11, this means that the API was unable to determine its difficulty and nothing is wrong with your API key.
+
+### 2. Error (225, 'BeginUpdateResource', 'The operation was not completed successfully because the file contains a virus or potentially unwanted software.') while running pyinstaller
+
+If you encounter this error, it is recommended to completely disable the Windows 10/11 antivirus in your system settings and then try to rebuild the exe file again. I honestly speaking have no idea why this problem occurs. In earlier versions of my program everything worked great without disabling antivirus.
+
+### 3. No module named 'PyQt5' or any other similar modules that I used in code
+
+If you see this error, it may mean that you are trying to run the window.py file from the `dist` folder, not from the `gui` folder. To resolve this issue, move the window.exe file from the `dist` folder to the `gui` folder. In future, I'll try to fix this issue so that the program can be run directly from the `dist` folder.
+
 ## Some additional information about this program.
 
 1. To add a new word you can just press ENTER after typing the word, you don't have to click "add" all the time.
