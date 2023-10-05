@@ -92,7 +92,7 @@ After adding some words just sort the table by difficulty.
 
 - **Addition/Change 1**: Add other languages support.
 - **Addition/Change 2**: Add option to create more than one table.
-- **Addition/Change 3**: Add stars near each word so the word will be in priority while sorting.
+- ~~**Addition/Change 3**: Add stars near each word so the word will be in priority while sorting.~~  (Completed)
 
 ## Troubleshooting
 
