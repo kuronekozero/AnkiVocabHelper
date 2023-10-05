@@ -1,9 +1,10 @@
+from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QLineEdit, QTableWidget, QTableWidgetItem, \
     QVBoxLayout, QWidget, QMessageBox
 from PyQt5.QtCore import Qt
 import sys
 
-from db import add_word, create_connection, get_all_words, create_table, delete_word, add_column, column_exists, word_exists
+from db import add_word, create_connection, get_all_words, create_table, delete_word, add_column, column_exists, word_exists, set_favorite, get_favorite, add_favorite_column
 from twinword import get_word_difficulty
 from info_window import InfoWindow
 
@@ -62,6 +63,10 @@ class MainWindow(QMainWindow):
         # Добавляем новый столбец, если он еще не существует
         if not column_exists(self.conn, "date_added"):
             add_column(self.conn)
+
+        # Добавляем новый столбец, если он еще не существует
+        if not column_exists(self.conn, "favorite"):
+            add_favorite_column(self.conn)
 
         # Создаем виджеты
         self.word_input = QLineEdit()
@@ -124,30 +129,49 @@ class MainWindow(QMainWindow):
         self.update_table()
         self.word_input.clear()
 
+    def toggle_favorite(self, word):
+        # Получите текущее состояние избранного для слова из базы данных
+        favorite = get_favorite(self.conn,
+                                word)  # Замените get_favorite на имя вашей функции для получения состояния избранного
+
+        # Переключите состояние избранного
+        set_favorite(self.conn, word,
+                     not favorite)  # Замените set_favorite на имя вашей функции для установки состояния избранного
+
+        # Обновите таблицу
+        self.update_table()
+
     def update_table(self):
         words = get_all_words(self.conn)
 
         self.table.setRowCount(len(words))
-        self.table.setColumnCount(4)  # Устанавливаем количество столбцов в таблице
+        self.table.setColumnCount(5)  # Увеличьте количество столбцов до 5
         self.table.setHorizontalHeaderLabels(
-            ["Words", "Difficulty", "Date", "Controls"])  # Устанавливаем заголовки столбцов
+            ["Words", "Difficulty", "Date", "Favorite", "Controls"])  # Добавьте заголовок "Favorite"
 
-        for i, (id, word, frequency, date_added) in enumerate(words):
+        for i, (id, word, frequency, date_added, favorite) in enumerate(words):  # Добавьте favorite в список переменных
             self.table.setItem(i, 0, QTableWidgetItem(word))
-            self.table.setItem(i, 1, NumericTableWidgetItem(str(frequency)))  # Используем NumericTableWidgetItem здесь
+            self.table.setItem(i, 1, NumericTableWidgetItem(str(frequency)))
             self.table.setItem(i, 2, QTableWidgetItem(date_added))
 
-            # Создаем кнопку "Удалить"
+            # Создайте кнопку "Избранное" и установите ее иконку в зависимости от значения favorite
+            favorite_button = QPushButton()
+            favorite_button.setIcon(QIcon(
+                "star_filled.png" if favorite else "star_empty.png"))  # Замените "star_filled.png" и "star_empty.png" на пути к вашим файлам иконок
+            favorite_button.clicked.connect(lambda checked, word=word: self.toggle_favorite(word))
+
+            # Добавьте кнопку в таблицу
+            self.table.setCellWidget(i, 3, favorite_button)
+
             delete_button = QPushButton("Delete")
             delete_button.clicked.connect(lambda checked, word=word: self.delete_word(word))
-
-            # Добавляем кнопку в таблицу
-            self.table.setCellWidget(i, 3, delete_button)
+            self.table.setCellWidget(i, 4, delete_button)
 
         # Устанавливаем ширину столбцов
         self.table.setColumnWidth(0, 200)
         self.table.setColumnWidth(1, 100)
         self.table.setColumnWidth(2, 200)
+        self.table.setColumnWidth(3, 100)  # Установите ширину столбца для кнопки "Избранное"
 
     def handle_item_clicked(self, item):
         # Проверяем, является ли элемент кнопкой "Удалить"

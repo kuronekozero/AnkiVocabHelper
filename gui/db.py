@@ -41,13 +41,35 @@ def add_column(conn):
     except Exception as e:
         print(e)
 
+def add_favorite_column(conn):
+    try:
+        sql = '''ALTER TABLE words ADD COLUMN favorite INTEGER DEFAULT 0;'''
+        conn.execute(sql)
+    except Exception as e:
+        print(e)
+
+def get_favorite(conn, word):
+    # Получите текущее состояние избранного для слова из базы данных
+    sql = '''SELECT favorite FROM words WHERE word = ?'''
+    cur = conn.cursor()
+    cur.execute(sql, (word,))
+    result = cur.fetchone()
+    return result[0] if result is not None else None
+
+def set_favorite(conn, word, favorite):
+    # Установите новое состояние избранного для слова в базе данных
+    sql = '''UPDATE words SET favorite = ? WHERE word = ?'''
+    cur = conn.cursor()
+    cur.execute(sql, (1 if favorite else 0, word))
+    conn.commit()
+
 def column_exists(conn, column_name):
     cur = conn.cursor()
     cur.execute(f"PRAGMA table_info(words)")
     return any(row[1] == column_name for row in cur.fetchall())
 
 def get_all_words(conn):
-    sql = '''SELECT id, word, frequency, date_added FROM words ORDER BY frequency ASC'''
+    sql = '''SELECT id, word, frequency, date_added, favorite FROM words ORDER BY favorite DESC, frequency ASC'''
     cur = conn.cursor()
     cur.execute(sql)
     return cur.fetchall()
