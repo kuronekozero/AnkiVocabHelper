@@ -106,7 +106,7 @@ If a word is added to the table with a difficulty of 0, this could indicate issu
 
 If you encounter this error, it is recommended to completely disable the Windows 10/11 antivirus in your system settings and then try to rebuild the exe file again. I honestly speaking have no idea why this problem occurs. In earlier versions of my program everything worked great without disabling antivirus.
 
-### 3. No module named 'PyQt5' or any other similar modules that I used in code
+### 3. No module named 'PyQt5', 'Cursor' or any other similar modules that I used in code
 
 If you see this error, it may mean that you are trying to run the window.py file from the `dist` folder, not from the `gui` folder. To resolve this issue, move the window.exe file from the `dist` folder to the `gui` folder. In future, I'll try to fix this issue so that the program can be run directly from the `dist` folder.
 
