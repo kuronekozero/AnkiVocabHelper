@@ -84,6 +84,8 @@ After adding some words just sort the table by difficulty.
 
 ### Fixes and Improvements
 
+Ok, you know what? I think that using API for scoring isn't really worth it. I probalby should rather switch to something like a csv list of words, it will be 10 times easier to use and it will be also 10 times easier to add new languages to the program.
+
 - ~~**Issue 1**: Fix sorting order.~~ (Completed)
 - ~~**Issue 2**: Fix upper case lower case problem.~~ (Completed)
 - **Issue 2**: Fix sorting words by date. 
