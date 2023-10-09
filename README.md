@@ -1,6 +1,6 @@
 # English Vocabulary Helper
 
-The English Vocabulary Helper is a free tool designed to assist learners in expanding their English vocabulary. It leverages the free Twinword API to assess the difficulty of English words. The application aids in determining which words should be added to Anki next. Typically, learners prefer to start with words that are easier, more common, and frequently used. This is where free(up to 9000 free requests a month) Twinword’s API comes into play - it evaluates the complexity of words, allowing users to prioritize learning words based on their difficulty level.
+The English Vocabulary Helper is a free tool designed to assist learners in expanding their English vocabulary. It leverages the wordfreq python library to assess the difficulty of English words. The application aids in determining which words should be added to Anki next. Typically, learners prefer to start with words that are easier, more common, and frequently used. This is where wordfreq library comes into play - it evaluates the complexity of words, allowing users to prioritize learning words based on their difficulty level.
 
 ![Screenshot](Screenshot_1.png)
 
