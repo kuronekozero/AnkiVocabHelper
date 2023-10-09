@@ -40,6 +40,8 @@ Now you can create a shortcut of main.exe and put it to your desktop screen.
 To run the application, simply execute the built exe file. You can add new tables and words to assess their difficulty and review them later. 
 After adding some words just sort the table by difficulty.
 
+![Screenshot](Screenshot_2.png)
+
 ## Development Updates
 
 ### Fixes and Improvements
