@@ -1,13 +1,20 @@
 import sqlite3
 from datetime import datetime
 
-def create_connection():
+def create_connection(table_name):
     conn = None
     try:
-        conn = sqlite3.connect('../gui/words.db')  # создает файл базы данных с именем 'words.db'
+        # Создаем файл базы данных с указанным именем таблицы
+        conn = sqlite3.connect(f'../gui/{table_name}.db')
+
+        # Создаем таблицу в новой базе данных
+        create_table(conn)
+
         return conn
     except Exception as e:
         print(e)
+
+
 
 def create_table(conn):
     try:

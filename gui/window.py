@@ -1,16 +1,18 @@
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QLineEdit, QTableWidget, QTableWidgetItem, \
-    QVBoxLayout, QWidget, QMessageBox
+    QVBoxLayout, QWidget, QMessageBox, QHBoxLayout
 from PyQt5.QtCore import Qt
 import sys
 
-from db import add_word, create_connection, get_all_words, create_table, delete_word, add_column, column_exists, word_exists, set_favorite, get_favorite, add_favorite_column
-from twinword import get_word_difficulty
+from db import add_word, create_connection, get_all_words, create_table, delete_word, add_column, column_exists, \
+    word_exists, set_favorite, get_favorite, add_favorite_column
+from wordfreqlib import get_word_difficulty
 from info_window import InfoWindow
 
 class MainWindow(QMainWindow):
-    def __init__(self):
+    def __init__(self, table_name):
         super().__init__()
+        #print(f"Initializing MainWindow with table: {table_name}")  # Добавьте эту строку
 
         self.setWindowTitle("My App")
 
@@ -54,8 +56,8 @@ class MainWindow(QMainWindow):
         # Устанавливаем размер окна
         self.setGeometry(100, 100, 800, 600)  # параметры: x, y, width, height
 
-        # Создаем подключение к базе данных
-        self.conn = create_connection()
+        # Создаем подключение к базе данных с указанным именем таблицы
+        self.conn = create_connection(table_name)
 
         # Создаем таблицу, если она еще не существует
         create_table(self.conn)
@@ -105,13 +107,27 @@ class MainWindow(QMainWindow):
 
         self.info_button = QPushButton("i")
         self.info_button.clicked.connect(self.show_info)
-        layout.addWidget(self.info_button)
         self.info_button.setFixedSize(30, 30)  # параметры: ширина, высота
+
+        self.back_button = QPushButton("Back")  # Создайте новую кнопку
+        self.back_button.clicked.connect(self.go_back)  # Подключите обработчик события нажатия кнопки
+        self.back_button.setFixedSize(50, 30)
+
+        # Создайте горизонтальный компоновщик
+        h_layout = QHBoxLayout()
+        h_layout.addWidget(self.info_button)
+        h_layout.addStretch()  # Добавьте растяжение между кнопками
+        h_layout.addWidget(self.back_button)
+
+        layout.addLayout(h_layout)  # Добавьте горизонтальный компоновщик в основной вертикальный компоновщик
 
         # Создаем центральный виджет и устанавливаем его в окне
         central_widget = QWidget()
         central_widget.setLayout(layout)
         self.setCentralWidget(central_widget)
+
+        self.update_table()  # Добавьте эту строку в конце метода __init__
+        #print("MainWindow initialized")  # Добавьте эту строку
 
     def add_word(self):
         words = self.word_input.text().split()
@@ -126,6 +142,7 @@ class MainWindow(QMainWindow):
             else:
                 difficulty = get_word_difficulty(word)
                 add_word(self.conn, word, difficulty)
+                #print(f"Added word: {word}")  # Добавьте эту строку
         self.update_table()
         self.word_input.clear()
 
@@ -144,12 +161,16 @@ class MainWindow(QMainWindow):
     def update_table(self):
         words = get_all_words(self.conn)
 
+        #print(f"Loaded {len(words)} words from the database")  # Добавьте эту строку
+
         self.table.setRowCount(len(words))
         self.table.setColumnCount(5)  # Увеличьте количество столбцов до 5
         self.table.setHorizontalHeaderLabels(
             ["Words", "Difficulty", "Date", "Favorite", "Controls"])  # Добавьте заголовок "Favorite"
 
         for i, (id, word, frequency, date_added, favorite) in enumerate(words):  # Добавьте favorite в список переменных
+            #print(f"Adding word: {word}")  # Добавьте эту строку
+
             self.table.setItem(i, 0, QTableWidgetItem(word))
             self.table.setItem(i, 1, NumericTableWidgetItem(str(frequency)))
             self.table.setItem(i, 2, QTableWidgetItem(date_added))
@@ -269,16 +290,24 @@ class MainWindow(QMainWindow):
         self.info_window = InfoWindow()
         self.info_window.show()
 
+    def go_back(self):
+        # Закройте MainWindow
+        self.close()
+
+        # Создайте и покажите TableSelectionWindow
+        from tables import TableSelectionWindow  # Импортируйте здесь
+        self.table_selection_window = TableSelectionWindow()
+        self.table_selection_window.show()
 
 class NumericTableWidgetItem(QTableWidgetItem):
     def __lt__(self, other):
         return float(self.text()) < float(other.text())
 
-# Создаем приложение и главное окно
-app = QApplication(sys.argv)
-window = MainWindow()
-window.update_table()
-window.show()
-
-# Запускаем цикл обработки событий приложения
-sys.exit(app.exec_())
+# # Создаем приложение и главное окно
+# app = QApplication(sys.argv)
+# window = MainWindow()
+# window.update_table()
+# window.show()
+#
+# # Запускаем цикл обработки событий приложения
+# sys.exit(app.exec_())
