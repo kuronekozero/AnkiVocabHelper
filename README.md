@@ -42,6 +42,29 @@ After adding some words just sort the table by difficulty.
 
 ![Screenshot](Screenshot_2.png)
 
+## Supported Languages
+
+- ** English **
+- ** Spanish **
+- ** German **
+- ** Franch **
+- ** Arabic **
+- ** Russian **
+- ** Czech **
+- ** Hebrew **
+- ** Polish **
+- ** Swedish **
+- ** Norwegian **
+- ** Dutch **
+- ** Italian **
+- ** Bengali **
+- ** Portuguese **
+- ** Catalan **
+
+More languages soon.
+PS. Tried adding japanese and chinese but for some reason they crush the program and I have no idea why...
+I'll try to fix it in the future.
+
 ## Development Updates
 
 ### Fixes and Improvements
