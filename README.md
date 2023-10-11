@@ -44,22 +44,22 @@ After adding some words just sort the table by difficulty.
 
 ## Supported Languages
 
-- ** English **
-- ** Spanish **
-- ** German **
-- ** Franch **
-- ** Arabic **
-- ** Russian **
-- ** Czech **
-- ** Hebrew **
-- ** Polish **
-- ** Swedish **
-- ** Norwegian **
-- ** Dutch **
-- ** Italian **
-- ** Bengali **
-- ** Portuguese **
-- ** Catalan **
+- **English**
+- **Spanish**
+- **German**
+- **Franch**
+- **Arabic**
+- **Russian**
+- **Czech**
+- **Hebrew**
+- **Polish**
+- **Swedish**
+- **Norwegian**
+- **Dutch**
+- **Italian**
+- **Bengali**
+- **Portuguese**
+- **Catalan**
 
 More languages soon.
 PS. Tried adding japanese and chinese but for some reason they crush the program and I have no idea why...
