@@ -14,8 +14,6 @@ def create_connection(table_name):
     except Exception as e:
         print(e)
 
-
-
 def create_table(conn):
     try:
         sql = '''CREATE TABLE IF NOT EXISTS words (
@@ -27,6 +25,27 @@ def create_table(conn):
         conn.execute(sql)
     except Exception as e:
         print(e)
+
+def add_language(conn, language):
+    try:
+        sql = '''CREATE TABLE IF NOT EXISTS languages (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    language TEXT NOT NULL
+                );'''
+        conn.execute(sql)
+        sql = '''INSERT INTO languages(language) VALUES(?)'''
+        cur = conn.cursor()
+        cur.execute(sql, (language,))
+        conn.commit()
+    except Exception as e:
+        print(e)
+
+def get_language(conn):
+    sql = '''SELECT language FROM languages ORDER BY id DESC LIMIT 1'''
+    cur = conn.cursor()
+    cur.execute(sql)
+    result = cur.fetchone()
+    return result[0] if result is not None else None
 
 def delete_word(conn, word):
     sql = '''DELETE FROM words WHERE word = ?'''
@@ -101,6 +120,7 @@ def main():
         create_table(conn)
     else:
         print("Error! Couldn't connect to Data Base.")
+
 
 if __name__ == '__main__':
     main()

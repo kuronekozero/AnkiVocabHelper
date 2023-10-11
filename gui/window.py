@@ -5,7 +5,7 @@ from PyQt5.QtCore import Qt
 import sys
 
 from db import add_word, create_connection, get_all_words, create_table, delete_word, add_column, column_exists, \
-    word_exists, set_favorite, get_favorite, add_favorite_column
+    word_exists, set_favorite, get_favorite, add_favorite_column, get_language
 from wordfreqlib import get_word_difficulty
 from info_window import InfoWindow
 
@@ -140,7 +140,10 @@ class MainWindow(QMainWindow):
                 msg.setWindowTitle("Error")
                 msg.exec_()
             else:
-                difficulty = get_word_difficulty(word)
+                # Получите язык из базы данных
+                language = get_language(self.conn)
+                # Передайте язык в функцию get_word_difficulty
+                difficulty = get_word_difficulty(word, language)
                 add_word(self.conn, word, difficulty)
                 #print(f"Added word: {word}")  # Добавьте эту строку
         self.update_table()
