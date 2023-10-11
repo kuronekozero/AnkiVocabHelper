@@ -61,7 +61,7 @@ After adding some words just sort the table by difficulty.
 - **Portuguese**
 - **Catalan**
 
-More languages soon.
+More languages coming soon.
 PS. Tried adding japanese and chinese but for some reason they crush the program and I have no idea why...
 I'll try to fix it in the future.
 
