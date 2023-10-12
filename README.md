@@ -66,8 +66,8 @@ I'll try to fix it in the future.
 
 ### Planned Additions and Changes
 
-- **Addition/Change 1**: Add other languages support.
 - **Addition/Change 2**: Add option to add sentences of phrases.
+- ~~**Addition/Change 1**: Add other languages support.~~ (Completed)
 - ~~**Addition/Change 3**: Add option to create more than one table.~~ (Completed)
 - ~~**Addition/Change 4**: Add stars near each word so the word will be in priority while sorting.~~  (Completed)
 
