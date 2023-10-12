@@ -16,24 +16,14 @@ To get started with this project, follow these steps:
 ```
 git clone https://github.com/kuronekozero/AnkiVocabHelper.git
 ```
-2. (Optional) You may require to run the following 2 commands for program to work properly if the step 4 won't work.
-```
-pip install requests
-```
+2. Navigate to the `gui` folder in project directory.
 
-and
-
-```
-pip install PyQt5
-```
-
-3. Navigate to the `gui` folder in project directory.
-
-4. Run main.exe file.
+3. Run main.exe file.
 
 That's it!
+Optionally you can create a shortcut of main.exe and put it on your desktop for quicker access.
 
-Now you can create a shortcut of main.exe and put it to your desktop screen.
+Also for some reason it may tell you that this program may be a virus. No idea how to fix it... In earlier versions of this program everything worked fine.
 
 ## Running the Application
 
