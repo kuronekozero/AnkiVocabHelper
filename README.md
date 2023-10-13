@@ -85,3 +85,7 @@ Well...:point_right::point_left: I never really managed to add the delete button
 2. If you want to add more than one word at ones you can just write the list of words that you want ot add devided by space. The program will send each word separately to the API.
 3. You can sort words in each direction from the simplest to the most difficult and in the opposite way by just clicking twice on the "difficulty" button.
 4. The word's difficulty varies from 1 to 10. If you are getting the word with number 11 that means that the API doesn't have this word. It happens very rare, usually with some very unpopular words, slang or some VERY simple words(like "What" for example(idk why really...))
+
+## License
+
+This project is licensed under the MIT License.
