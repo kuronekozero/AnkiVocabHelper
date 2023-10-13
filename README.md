@@ -4,7 +4,7 @@
 
 
 <p align="center">  
-  <h1>Anki Vocabulary Helper</h1>
+  # Anki Vocabulary Helper
 </p>
 
 The Anki Vocabulary Helper is a free tool designed to assist learners in expanding their vocabulary in foreign languages. It leverages the wordfreq python library to assess the difficulty of foreign words. The application aids in determining which words should be added to Anki next. Typically, learners prefer to start with words that are easier, more common, and frequently used. This is where wordfreq library comes into play - it evaluates the complexity of words, allowing users to prioritize learning words based on their difficulty level.
