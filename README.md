@@ -1,5 +1,5 @@
 <p align="center">  
-  <img src="gui\icon.png" width=100 height=100>
+  <img src="gui\icon.png" width=150 height=150>
 </p>
 
 # Anki Vocabulary Helper
