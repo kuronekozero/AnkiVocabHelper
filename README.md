@@ -75,8 +75,12 @@ I'll try to fix it in the future.
 - ~~**Addition/Change 3**: Add option to create more than one table.~~ (Completed)
 - ~~**Addition/Change 4**: Add stars near each word so the word will be in priority while sorting.~~  (Completed)
 
-## Some additional information about this program.
+## Some additional information
 
+### How to delete tables?
+Well...:point_right::point_left: I never really managed to add the delete button to the "List of tables" window. But I'll try to add it in the future. For now just go to `gui` folder and delete any table you don't want from there.
+
+## Tips 
 1. To add a new word you can just press ENTER after typing the word, you don't have to click "add" all the time.
 2. If you want to add more than one word at ones you can just write the list of words that you want ot add devided by space. The program will send each word separately to the API.
 3. You can sort words in each direction from the simplest to the most difficult and in the opposite way by just clicking twice on the "difficulty" button.
