@@ -2,7 +2,7 @@ from wordfreq import zipf_frequency
 
 def get_word_difficulty(word, lang):
     # Получаем сложность слова с помощью функции zipf_frequency из библиотеки wordfreq
-    zipf_difficulty = zipf_frequency(word, lang, 'large')  # Измените 'best' на 'large'
+    zipf_difficulty = zipf_frequency(word, lang, wordlist='best')  # Измените 'best' на 'large'
 
     # Если слово не найдено в базе данных wordfreq, возвращаем 11
     if zipf_difficulty == 0:
