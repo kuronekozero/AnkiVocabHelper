@@ -130,8 +130,9 @@ class MainWindow(QMainWindow):
         #print("MainWindow initialized")  # Добавьте эту строку
 
     def add_word(self):
-        words = self.word_input.text().split()
+        words = self.word_input.text().split(',')
         for word in words:
+            word = word.strip()  # Удалить пробелы в начале и конце слова
             if word_exists(self.conn, word):
                 # Создаем и показываем QMessageBox
                 msg = QMessageBox()
@@ -145,7 +146,7 @@ class MainWindow(QMainWindow):
                 # Передайте язык в функцию get_word_difficulty
                 difficulty = get_word_difficulty(word, language)
                 add_word(self.conn, word, difficulty)
-                #print(f"Added word: {word}")  # Добавьте эту строку
+                # print(f"Added word: {word}")  # Добавьте эту строку
         self.update_table()
         self.word_input.clear()
 

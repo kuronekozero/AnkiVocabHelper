@@ -8,7 +8,7 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[('C:\\Users\\Kuroneko\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\wordfreq\\data', 'wordfreq/data')],
+    datas=[('C:\\Users\\Kuroneko\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\wordfreq\\data', 'wordfreq/data'), ('C:\\Users\\Kuroneko\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\mecab_ko_dic', 'mecab_ko_dic'), ('C:\\Users\\Kuroneko\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\ipadic', 'ipadic')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
