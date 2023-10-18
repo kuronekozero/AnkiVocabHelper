@@ -41,6 +41,9 @@ After adding some words just sort the table by difficulty.
 - **English**
 - **Spanish**
 - **German**
+- **Japanese**
+- **Korean**
+- **Chinese**
 - **Franch**
 - **Arabic**
 - **Russian**
@@ -55,9 +58,9 @@ After adding some words just sort the table by difficulty.
 - **Portuguese**
 - **Catalan**
 
-More languages coming soon.
-PS. Tried adding japanese and chinese but for some reason they crush the program and I have no idea why...
-I'll try to fix it in the future.
+And 20 more languages!
+
+Ukranian coming soon.
 
 ## Development Updates
 
@@ -70,7 +73,7 @@ I'll try to fix it in the future.
 
 ### Planned Additions and Changes
 
-- **Addition/Change 2**: Add option to add sentences of phrases.
+- ~~**Addition/Change 2**: Add option to add sentences of phrases.~~ (Completed)
 - ~~**Addition/Change 1**: Add other languages support.~~ (Completed)
 - ~~**Addition/Change 3**: Add option to create more than one table.~~ (Completed)
 - ~~**Addition/Change 4**: Add stars near each word so the word will be in priority while sorting.~~  (Completed)
@@ -82,7 +85,7 @@ Well...:point_right::point_left: I never really managed to add the delete button
 
 ## Tips 
 1. To add a new word you can just press ENTER after typing the word, you don't have to click "add" all the time.
-2. If you want to add more than one word at ones you can just write the list of words that you want ot add devided by space. The program will send each word separately to the API.
+2. If you want to add more than one word at ones you can just write the list of words that you want ot add devided by ",". The program will rate each word separately.
 3. You can sort words in each direction from the simplest to the most difficult and in the opposite way by just clicking twice on the "difficulty" button.
 4. The word's difficulty varies from 1 to 10. If you are getting the word with number 11 that means that the API doesn't have this word. It happens very rare, usually with some very unpopular words, slang or some VERY simple words(like "What" for example(idk why really...))
 
