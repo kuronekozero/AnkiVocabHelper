@@ -63,6 +63,8 @@ And 20 more languages!
 You can check the full list of supported languages on wordfreq's page: 
 <a href="https://pypi.org/project/wordfreq/">Wordfreq library page.</a>
 
+PS: I removed slovak and slovenian because this 2 languages didn't work properly for some reason, sorry;( 
+
 Ukranian coming soon.
 
 ## Development Updates
