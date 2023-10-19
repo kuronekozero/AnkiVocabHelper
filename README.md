@@ -36,6 +36,16 @@ After adding some words just sort the table by difficulty.
 
 ![Screenshot](Screenshot_2.png)
 
+## How to use it?
+
+1. Find a new word that you want to add to your Anki deck in the future. You can find words by watching content on youtube or reading books on the language that you are trying to learn.
+  
+2. Add this word to the table in AnkiVocabHelper.
+
+3. Whenever you want to add new words to your Anki deck just copy first words from AnkiVocabHelper and make new cards out of it. The first words that you are going to see in the table will be the one that are the most popular among natives in your targeted language. If you want to see the hardest words first, just sort the table by difficulty by clicking on the button "difficulty".
+
+4. Repeat until C2.
+
 ## Supported Languages
 
 - **English**
