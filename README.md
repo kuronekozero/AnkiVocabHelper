@@ -93,19 +93,31 @@ Ukranian coming soon.
 - ~~**Addition/Change 3**: Add option to create more than one table.~~ (Completed)
 - ~~**Addition/Change 4**: Add stars near each word so the word will be in priority while sorting.~~  (Completed)
 
-## Some additional information
+## FAQ
 
 ### How to delete tables?
 Well...:point_right::point_left: I never really managed to add the delete button to the "List of tables" window. But I'll try to add it in the future. For now just go to `gui` folder and delete any table you don't want from there.
 
-### I just installed newer version of AnkiVocabHelper, how can I move my words from old version to the new one?
-Just copy .db files from gui folder in old version of the program and paste it into a new version of the program in the same folder.
+### I just installed a newer version of AnkiVocabHelper. How can I move my words from the old version to the new one?
+Just copy .db files from the gui folder in the old version of the program and paste them into the new version of the program in the same folder.
+
+### Why do some of my words get a 101 when I add them?
+It happens when the WordFreq library can't define the difficulty of a word. It may happen if the word that you are trying to add was written incorrectly or if this is a very unpopular word, like slang, for example. This problem may also occur if you are trying to add words, for example, in Japanese, to the Chinese table. If you created a new table and selected Bosnian as the main language, you can add only Bosnian words to this table. If you want to have more than one language, you need to create a saparate table.
+
+### What does (small) mean near some of the languages?
+That means that this language doesn't have a huge database of words, and there are higher chances that you will encounter a word with a score of 101 (even if this word actually exists). You can still use this language, especially if you are not using any complex words or slang. Just keep in mind that there is a chance to encounter words that the program couldn't score occasionally.
+
+### I'm tired of clicking "Add" every time; are there any other ways of adding words?
+Yes, instead of clicking "Add," you can just press Enter instead. Also, if you want to add more than one word, you can write a list of words divided by ','. It is supposed to look something like this: "dog, cat, car, language". After that, you can just press Enter and wait until all the words are added to the table.
+
+### What is the purpose of the 'Favorite' field?
+Sometimes you want to learn more difficult words first, like, for example, because you have an exam soon and you need to know a specific list of words. In this case, you can just go through the list of words and click on the star icon, so these words will be shown first, no matter how difficult they are.
 
 ## Tips 
 1. To add a new word you can just press ENTER after typing the word, you don't have to click "add" all the time.
 2. If you want to add more than one word at ones you can just write the list of words that you want ot add devided by ",". The program will rate each word separately.
 3. You can sort words in each direction from the simplest to the most difficult and in the opposite way by just clicking twice on the "difficulty" button.
-4. The word's difficulty varies from 1 to 10. If you are getting the word with number 11 that means that the API doesn't have this word. It happens very rare, usually with some very unpopular words, slang or some VERY simple words(like "What" for example(idk why really...))
+4. The word's difficulty varies from 1 to 100. If you are getting the word with number 101 that means that the API doesn't have this word. It happens very rare, usually with some very unpopular words and slang.
 
 ## License
 
