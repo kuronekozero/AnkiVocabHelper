@@ -14,7 +14,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         #print(f"Initializing MainWindow with table: {table_name}")  # Добавьте эту строку
 
-        self.setWindowTitle("My App")
+        self.setWindowTitle("AnkiVocabHelper")
 
         self.setStyleSheet("""
             QMainWindow {
