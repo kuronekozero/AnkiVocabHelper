@@ -88,6 +88,9 @@ Ukranian coming soon.
 ### How to delete tables?
 Well...:point_right::point_left: I never really managed to add the delete button to the "List of tables" window. But I'll try to add it in the future. For now just go to `gui` folder and delete any table you don't want from there.
 
+### I just installed newer version of AnkiVocabHelper, how can I move my words from old version to the new one?
+Just copy .db files from gui folder in old version of the program and paste it into a new version of the program in the same folder.
+
 ## Tips 
 1. To add a new word you can just press ENTER after typing the word, you don't have to click "add" all the time.
 2. If you want to add more than one word at ones you can just write the list of words that you want ot add devided by ",". The program will rate each word separately.
