@@ -60,6 +60,9 @@ After adding some words just sort the table by difficulty.
 
 And 20 more languages!
 
+You can check the full list of supported languages on wordfreq's page: 
+<a href="https://pypi.org/project/wordfreq/">Wordfreq library page.</a>
+
 Ukranian coming soon.
 
 ## Development Updates
