@@ -16,7 +16,7 @@ By using this application, learners can streamline their vocabulary learning pro
 
 To get started with this project, follow these steps:
 
-1. Clone this repository to your local machine.
+1. Clone this repository to your local machine or download ZIP.
 ```
 git clone https://github.com/kuronekozero/AnkiVocabHelper.git
 ```
