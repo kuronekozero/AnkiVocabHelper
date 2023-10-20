@@ -13,21 +13,8 @@ The primary purpose of this application is to facilitate the tracking of new wor
 By using this application, learners can streamline their vocabulary learning process and focus on the most relevant words first.
 
 ## Getting Started
-
-To get started with this project, follow these steps:
-
-1. Clone this repository to your local machine or download ZIP.
-```
-git clone https://github.com/kuronekozero/AnkiVocabHelper.git
-```
-2. Navigate to the `gui` folder in project directory.
-
-3. Run main.exe file.
-
-That's it!
-Optionally you can create a shortcut of main.exe and put it on your desktop for quicker access.
-
-Also for some reason it may tell you that this program may be a virus. No idea how to fix it... In earlier versions of this program everything worked fine.
+Github SUCKS and not allowing anyone to clone this repo because I didn't pay for git LFS...
+Give me a minute, I'll try to fix this problem today, for now just don't do anything, you want be able to lounch .EXE file if you'll try to clone this repo.
 
 ## Running the Application
 
