@@ -15,8 +15,11 @@ By using this application, learners can streamline their vocabulary learning pro
 ## Getting Started
 
 1. Install AnkiVocabHelper.zip from **releases** page.
+
 2. Extract AnkiVocabHelper.
+
 3. Navigate to gui folder.
+
 4. Run main.exe.
 
 That's it!
