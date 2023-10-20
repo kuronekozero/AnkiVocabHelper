@@ -13,8 +13,26 @@ The primary purpose of this application is to facilitate the tracking of new wor
 By using this application, learners can streamline their vocabulary learning process and focus on the most relevant words first.
 
 ## Getting Started
-Github SUCKS and not allowing anyone to clone this repo because I didn't pay for git LFS...
-Give me a minute, I'll try to fix this problem today, for now just don't do anything, you won't be able to lounch .EXE file if you'll try to clone this repo.
+
+Github SUCKS! They are not allowing anyone to clone this repo properly; if you try to clone it, you won't be able to run the main.exe file to use the program. It happens because my repo contains several large files, like .exe file, for example, which is over 100 MB (385 MB to be exact), and my git LFS subscription has ended.Here's what you can do to download AnkiVocabHelper:
+
+1. Open the following link to my Google Drive, where I've uploaded AnkiVocabHelper: <a href="https://drive.google.com/drive/folders/1ZLymxdHB3TAaRWiUTpf7ZWOqq14nQgDR?usp=share_link">Google drive. </a>.
+   
+2. Download it.
+   
+3. Extract the AnkiVocabHelper folder wherever you like.
+  
+4. Open the gui folder and run the main.exe file.
+   
+That's it! Optionally, you can create a shortcut for main.exe and put it on your desktop for quicker access.
+
+Optionally if you are very paranoid you can build your own EXE using main.spec file that is in my repo. Just clone this repo and run the following command in gui folder:
+
+```
+pyinstaller main.spec
+```
+
+Keep in mind that if you REALLY want to build you own EXE you need to install pyinstaller first.
 
 ## Running the Application
 
