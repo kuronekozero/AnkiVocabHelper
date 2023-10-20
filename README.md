@@ -14,7 +14,7 @@ By using this application, learners can streamline their vocabulary learning pro
 
 ## Getting Started
 Github SUCKS and not allowing anyone to clone this repo because I didn't pay for git LFS...
-Give me a minute, I'll try to fix this problem today, for now just don't do anything, you want be able to lounch .EXE file if you'll try to clone this repo.
+Give me a minute, I'll try to fix this problem today, for now just don't do anything, you won't be able to lounch .EXE file if you'll try to clone this repo.
 
 ## Running the Application
 
