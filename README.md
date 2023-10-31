@@ -20,7 +20,7 @@ By using this application, learners can streamline their vocabulary learning pro
 
 3. Navigate to gui folder.
 
-4. Run main.exe.
+4. Run AnkiVocabHelper.exe.
 
 That's it!
 
