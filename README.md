@@ -72,8 +72,6 @@ You can check the full list of supported languages on wordfreq's page:
 
 PS: I removed slovak and slovenian because this 2 languages didn't work properly for some reason, sorry;( 
 
-Ukranian coming soon.
-
 ## Development Updates
 
 ### Fixes and Improvements
